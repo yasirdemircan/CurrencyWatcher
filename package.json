@@ -1,0 +1,33 @@
+{
+  "nativescript": {
+    "id": "io.CurrencyWatcher",
+    "tns-ios": {
+      "version": "6.3.0"
+    },
+    "tns-android": {
+      "version": "6.3.1"
+    }
+  },
+  "description": "NativeScript Application",
+  "license": "SEE LICENSE IN <your-license-filename>",
+  "repository": "<fill-your-repository-here>",
+  "scripts": {
+    "lint": "eslint \"app/**/*.js\""
+  },
+  "dependencies": {
+    "@nativescript/theme": "~2.2.1",
+    "nativescript-background-fetch": "^1.2.1",
+    "nativescript-carousel": "6.1.1",
+    "nativescript-local-notifications": "4.2.1",
+    "nativescript-socketio": "3.3.1",
+    "nativescript-worker-loader": "0.11.0",
+    "tns-core-modules": "~6.3.0"
+  },
+  "devDependencies": {
+    "eslint": "~5.8.0",
+    "nativescript-dev-webpack": "~1.4.0",
+    "node-sass": "^4.7.1"
+  },
+  "gitHead": "fa98f785df3fba482e5e2a0c76f4be1fa6dc7a14",
+  "readme": "NativeScript Application"
+}

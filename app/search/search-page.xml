@@ -1,0 +1,26 @@
+<Page
+    navigatingTo="onNavigatingTo"  
+    xmlns="http://schemas.nativescript.org/tns.xsd">
+
+    <ActionBar>
+        <Label text="Uyarı Listesi"></Label>
+    </ActionBar>
+
+    <GridLayout class="page__content">
+        
+      <ListView items="{{ notifyList }}" 
+                style="font-size:20px"
+          itemTap="onItemTap" 
+          loaded="{{ onListViewLoaded }}" 
+          separatorColor="blue" rowHeight="50"
+          class="list-group" id="listView" row="2">
+    <ListView.itemTemplate>
+        <!-- The item template can only have a single root view container (e.g. GriLayout, StackLayout, etc.) -->
+        <StackLayout class="list-group-item">
+            <Label text="{{ name +' '+buysell+' '+ optype+ ' ' + val || 'Yükleniyor...' }}" textWrap="true" class="title" />
+        </StackLayout>
+    </ListView.itemTemplate>
+</ListView>
+        
+    </GridLayout>
+</Page>

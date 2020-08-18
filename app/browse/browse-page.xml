@@ -1,0 +1,21 @@
+<Page navigatingTo="onNavigatingTo" xmlns="http://schemas.nativescript.org/tns.xsd">
+
+    <ActionBar>
+        <Label text="Uyarılar"></Label>
+    </ActionBar>
+
+    <GridLayout class="page__content">
+        <StackLayout>
+            <StackLayout >
+              <Label text="Döviz/Altın Türü" style="font-size:18px" horizontalAlignment="center"></Label>
+            <ListPicker items="{{ currencies }}" selectedIndex="0" height="300px" loaded="{{onCurrencyListLoaded}}" />
+              <ListPicker items="{{ buysell }}" selectedIndex="0" height="300px" loaded="{{onBuySellListLoaded}}" />
+            </StackLayout>
+              <Label text="Operatör Türü" style="font-size:18px" horizontalAlignment="center"></Label>
+            <ListPicker items="{{ operations }}" selectedIndex="0"  height="300px" loaded="{{onOperatorListLoaded}}" />
+            <TextField hint="Uyarı Değeri" id="cValue" style="font-size:18px" color="orangered" keyboardType="number" />
+            <Button text="Uyarı Ekle" tap="{{onTap}}"></Button>
+        </StackLayout>
+
+    </GridLayout>
+</Page>

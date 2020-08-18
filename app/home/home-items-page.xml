@@ -1,0 +1,32 @@
+<Page
+    navigatingTo="onNavigatingTo"  
+    xmlns="http://schemas.nativescript.org/tns.xsd"
+      xmlns:ns="nativescript-carousel">
+
+    <ActionBar>
+        <Label text="Kurlar"></Label>
+    </ActionBar>
+<ns:Carousel id="myCarousel" items="{{ items }}" height="100%" width="100%" color="white" pageChanged="myChangeEvent" android:indicatorAnimation="slide"  indicatorColor="#fff" indicatorOffset="0,0" showIndicator="true">
+    <ns:Carousel.itemTemplate>
+        <ns:CarouselItem backgroundColor="{{ color }}" verticalAlignment="middle" tap="myTapEvent">
+            <GridLayout>
+            <StackLayout style="font-size:30px"  verticalAlignment="middle" >
+               <!-- <Image src="{{ image }}" stretch="aspectFill" />-->
+                <Label text="{{name}}" horizontalAlignment="center" backgroundColor="#50000000" height="50" />
+                 <Label text="{{'Alış: '+buy}}" horizontalAlignment="center" backgroundColor="#50000000" height="50" />
+                 <Label text="{{'Satış: '+sell}}" horizontalAlignment="center" backgroundColor="#50000000" height="50" />
+                  <Label text="{{'Son Güncelleme: '+lastUpdate}}" horizontalAlignment="center" backgroundColor="#50000000" height="50" />
+            </StackLayout>
+                </GridLayout>
+        </ns:CarouselItem>
+    </ns:Carousel.itemTemplate>
+</ns:Carousel>
+    
+    <!--<ListView items="{{ items }}" itemTap="onItemTap">
+        <ListView.itemTemplate>
+            <StackLayout orientation="horizontal">
+                <Label text="{{ name }}" textWrap="true"></Label>
+            </StackLayout>
+        </ListView.itemTemplate>
+    </ListView>-->
+</Page>
